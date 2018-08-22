@@ -29,7 +29,7 @@ class App extends Component {
         {
           this.state.showModal ?
             <Modal modalOutsideClick={() => this.setState({ showModal: false })}>
-              <div>I'm content</div>
+              <div>content</div>
               <button onClick={() => this.setState({ showModal: false })}>Close</button>
             </Modal> : ''
         }
