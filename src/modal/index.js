@@ -23,8 +23,8 @@ const styles = {
 }
 
 const Modal = (props) =>  (
-  <div onClick={() => props.modalOutsideClick && props.modalOutsideClick()} style={Object.assign(styles.containerStyle, props.modalOutsideStyle)}>
-    <div onClick={(e) => e.stopPropagation()} style={Object.assign(styles.contentBlock, props.modalInsideStyle)}>
+  <div onClick={() => props.modalOutsideClick && props.modalOutsideClick()} style={{...styles.containerStyle, ...props.modalOutsideStyle}}>
+    <div onClick={(e) => e.stopPropagation()} style={{...styles.contentBlock, ...props.modalInsideStyle}}>
       {props.children}
     </div>
   </div>

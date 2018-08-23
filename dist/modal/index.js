@@ -4,6 +4,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -37,12 +39,12 @@ var Modal = function Modal(props) {
     'div',
     { onClick: function onClick() {
         return props.modalOutsideClick && props.modalOutsideClick();
-      }, style: Object.assign(styles.containerStyle, props.modalOutsideStyle) },
+      }, style: _extends({}, styles.containerStyle, props.modalOutsideStyle) },
     _react2.default.createElement(
       'div',
       { onClick: function onClick(e) {
           return e.stopPropagation();
-        }, style: Object.assign(styles.contentBlock, props.modalInsideStyle) },
+        }, style: _extends({}, styles.contentBlock, props.modalInsideStyle) },
       props.children
     )
   );
